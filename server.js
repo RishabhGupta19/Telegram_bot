@@ -79,14 +79,17 @@ bot.command('timetable', async (ctx) => {
             return;
         }
 
-        const slot = timetable.slots.find((slot) => slot.class === classNumber);
+       // const slot = timetable.slots.find((slot) => slot.class === classNumber);
+
+        const slot = timetable.slots[classNumber - 1]; // Fixed this line
 
         if (!slot) {
             await ctx.reply(`No timetable entry found for class ${classNumber} on ${day}.`);
             return;
         }
-
+        
         await ctx.reply(`For ${day.charAt(0).toUpperCase() + day.slice(1)} (Class ${classNumber}):\nTime: ${slot.time}\nSubject: ${slot.subject}`);
+        
     } catch (err) {
         console.error("Error fetching timetable:", err);
         await ctx.reply("An error occurred while fetching the timetable. Please try again later.");
