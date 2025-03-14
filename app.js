@@ -1,6 +1,6 @@
 import {Telegraf} from 'telegraf';
 
-import userModel from './src/models/user.js';
+import userModel from './user.js';
 
 import mongoose from 'mongoose';
 
