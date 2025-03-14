@@ -4,7 +4,7 @@ import userModel from './user.js';
 
 import mongoose from 'mongoose';
 
-import connectdb from './config/db.js';
+import connectdb from './db.js';
 
 const bot = new Telegraf(process.env.BOT_TOKEN);
 
