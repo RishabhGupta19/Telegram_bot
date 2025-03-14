@@ -11,6 +11,7 @@ const bot = new Telegraf(process.env.BOT_TOKEN);
 try{
     connectdb();
     console.log("Database Connected Successfully");
+    console.log(DB_NAME);
    
 }
 catch(err){
