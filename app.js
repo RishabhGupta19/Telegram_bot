@@ -97,7 +97,7 @@ bot.command('timetable', async (ctx) => {
     }
 });
 
-
+const PORT = process.env.PORT || 3000;
 bot.launch();
 
 process.once('SIGINT', () => bot.stop('SIGINT'))
